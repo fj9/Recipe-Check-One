@@ -5,6 +5,8 @@ First have an activeMQ broker running
 
 Then run with
 
-'''bash
+```bash
+
 gradle bootrun
-'''
+
+```
