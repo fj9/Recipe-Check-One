@@ -15,7 +15,7 @@ classes
 *.iws
 
 # Mac
-**/.DS_Store/
+**/.DS_Store
 # Gradle
 build
 .gradle
