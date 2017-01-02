@@ -1,0 +1,45 @@
+<h1>Ingredient Search</h1>
+<div layout="column" ng-cloak class="md-inline-form">
+    <md-content layout="column" layout-padding md-theme="dark-grey">
+        <form ng-submit="search(ingredient)">
+
+            <md-input-container style="padding-bottom: 0; margin-bottom: 0" ng-submit="search(ingredient)">
+                <md-icon md-font-set="material-icons" ng-click="search(ingredient)"> search</md-icon>
+                <label>Ingredient</label>
+                <input ng-model="ingredient">
+            </md-input-container>
+        </form>
+    </md-content>
+    <!--<md-toolbar>-->
+    <!--<div class="md-toolbar-tools">-->
+    <!--<md-icon md-font-set="material-icons"> search</md-icon>-->
+    <!--<md-input-container class="md-block" flex-gt-sm>-->
+    <!--<label>Ingredient</label>-->
+    <!--<input ng-model="ingredient">-->
+    <!--</md-input-container>-->
+    <!--<span flex></span>-->
+    <!--<md-button class="md-icon-button" aria-label="Done" ng-click="search(ingredient)">-->
+    <!--&lt;!&ndash;TODO: fix this button so that carriage eturn will also send&ndash;&gt;-->
+    <!--<md-icon md-font-set="material-icons"> done</md-icon>-->
+    <!--</md-button>-->
+    <!--</div>-->
+    <!--</md-toolbar>-->
+    <md-content>
+        <!--TODO: fix this so that it refreshes without needing to click-->
+        <p ng-repeat="recipe in recipes">
+            <md-card>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">{{recipe.label}}</span>
+                        <span class="md-subhead"><a href="{{recipe.uri}}">{{recipe.uri}}</a></span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content layout="row" layout-align="space-between">
+                    <img ng-src="{{recipe.image}}">
+                </md-card-content>
+            </md-card>
+        </p>
+    </md-content>
+
+
+</div>
